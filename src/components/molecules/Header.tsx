@@ -1,6 +1,7 @@
 import { Separator } from "../ui/separator";
 
 const menuItems = [
+	{ title: "Home", href: "/" },
 	{ title: "About", href: "/about" },
 	{ title: "Resume", href: "/resume" },
 	{ title: "Portfolio", href: "/portfolio" },
@@ -10,7 +11,7 @@ const menuItems = [
 
 const Header = ({ title }: { title: React.ReactNode }) => {
 	return (
-		<header className="relative">
+		<header className="relative py-4">
 			<div className="bg-slate-600 rounded-sm p-6 absolute top-0 right-0 lg:w-max lg:rounded-tl-none lg:rounded-bl-3xl lg:py-6 lg:px-8 lg:shadow-none">
 				<nav className="flex space-x-6">
 					{menuItems.map((item) => (

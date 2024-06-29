@@ -22,6 +22,78 @@ const portfolioItems = [
 		title: "Application Project 1",
 		description: "Description of Application Project 1",
 	},
+	{
+		category: "Web Design",
+		image: "/path/to/web-design1.png",
+		title: "Web Design Project 1",
+		description: "Description of Web Design Project 1",
+	},
+	{
+		category: "Web Development",
+		image: "/path/to/web-development1.png",
+		title: "Web Development Project 1",
+		description: "Description of Web Development Project 1",
+	},
+	{
+		category: "Application",
+		image: "/path/to/application1.png",
+		title: "Application Project 1",
+		description: "Description of Application Project 1",
+	},
+	{
+		category: "Web Design",
+		image: "/path/to/web-design1.png",
+		title: "Web Design Project 1",
+		description: "Description of Web Design Project 1",
+	},
+	{
+		category: "Web Development",
+		image: "/path/to/web-development1.png",
+		title: "Web Development Project 1",
+		description: "Description of Web Development Project 1",
+	},
+	{
+		category: "Application",
+		image: "/path/to/application1.png",
+		title: "Application Project 1",
+		description: "Description of Application Project 1",
+	},
+	{
+		category: "Web Design",
+		image: "/path/to/web-design1.png",
+		title: "Web Design Project 1",
+		description: "Description of Web Design Project 1",
+	},
+	{
+		category: "Web Development",
+		image: "/path/to/web-development1.png",
+		title: "Web Development Project 1",
+		description: "Description of Web Development Project 1",
+	},
+	{
+		category: "Application",
+		image: "/path/to/application1.png",
+		title: "Application Project 1",
+		description: "Description of Application Project 1",
+	},
+	{
+		category: "Web Design",
+		image: "/path/to/web-design1.png",
+		title: "Web Design Project 1",
+		description: "Description of Web Design Project 1",
+	},
+	{
+		category: "Web Development",
+		image: "/path/to/web-development1.png",
+		title: "Web Development Project 1",
+		description: "Description of Web Development Project 1",
+	},
+	{
+		category: "Application",
+		image: "/path/to/application1.png",
+		title: "Application Project 1",
+		description: "Description of Application Project 1",
+	},
 	// Add more portfolio items here
 ];
 
@@ -35,7 +107,7 @@ const tabData = [
 const Portfolio = () => {
 	return (
 		<Layout title="Portfolio">
-			<div className="container mx-auto p-4">
+			<div className="">
 				<Tabs defaultValue="all" className="w-full justify-items-start">
 					<TabsList className="flex space-x-4 bg-gray-800">
 						{tabData.map((tab) => (

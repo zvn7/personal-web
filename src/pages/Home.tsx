@@ -69,7 +69,7 @@ const Home = () => {
 				/>
 			}
 		>
-			<div className="container mx-auto p-4">
+			<div>
 				<section className="">
 					<p className="mt-2 text-gray-600">
 						• Remote worker • Based in Jakarta

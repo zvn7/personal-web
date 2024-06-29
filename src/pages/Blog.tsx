@@ -56,7 +56,7 @@ const blogPosts = [
 const Blog = () => {
 	return (
 		<Layout title="Blog">
-			<div className="container mx-auto p-4">
+			<div >
 				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4">
 					{blogPosts.map((post, index) => (
 						<Card key={index} className="bg-gray-700 p-4 rounded-lg">

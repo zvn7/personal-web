@@ -27,7 +27,7 @@ const clients = [
 const About = () => {
 	return (
 		<Layout title="About Me">
-			<div className="container mx-auto p-4">
+			<div >
 				<div>
 					<p>
 						I'm Creative Director and UI/UX Designer from Sydney, Australia,

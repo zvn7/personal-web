@@ -4,7 +4,7 @@ import Layout from "@/components/templates/Layout";
 const Contact = () => {
 	return (
 		<Layout title="Contact">
-			<div className="container mx-auto p-4">
+			<div >
 				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4">
 					<div className="bg-gray-700 p-4 rounded-lg">
 						<h2 className="text-xl font-bold mb-2">Get in touch</h2>
