@@ -1,19 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import {
 	Form,
 	FormControl,
-	FormDescription,
 	FormField,
-	FormItem,
 	FormLabel,
 	FormMessage,
-} from "@/components/ui/form"; // Pastikan impor ini benar
-import { Button } from "@/components/ui/button"; // Pastikan impor ini benar
-import { Input } from "@/components/ui/input"; // Pastikan impor ini benar
+} from "@/components/ui/form";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 import { Textarea } from "../ui/textarea";
+import Swal from "sweetalert2";
 
 const formSchema = z.object({
 	name: z.string().min(2, { message: "Name must be at least 2 characters." }),
@@ -24,6 +23,7 @@ const formSchema = z.object({
 });
 
 const ContactForm = () => {
+	const [isLoading, setIsLoading] = useState(false);
 	const form = useForm<z.infer<typeof formSchema>>({
 		resolver: zodResolver(formSchema),
 		defaultValues: {
@@ -33,62 +33,111 @@ const ContactForm = () => {
 		},
 	});
 
-	// 2. Define a submit handler.
 	function onSubmit(values: z.infer<typeof formSchema>) {
-		// Do something with the form values.
-		// ✅ This will be type-safe and validated.
-		console.log(values);
+		setIsLoading(true);
+		const formspreeEndpoint = "https://formspree.io/f/mrbzgbdo"; // Endpoint Formspree yang sudah Anda berikan
+
+		fetch(formspreeEndpoint, {
+			method: "POST",
+			headers: {
+				"Content-Type": "application/json",
+			},
+			body: JSON.stringify(values),
+		})
+			.then((response) => response.json())
+			.then((data) => {
+				console.log("Success:", data);
+				setIsLoading(false);
+				Swal.fire({
+					icon: "success",
+					title: "Success",
+					text: "Your message has been sent successfully!",
+				});
+				form.reset(); // Optional: reset form after successful submission
+			})
+			.catch((error) => {
+				console.error("Error:", error);
+				setIsLoading(false);
+				Swal.fire({
+					icon: "error",
+					title: "Oops...",
+					text: "Something went wrong! Please try again later.",
+				});
+			});
 	}
 
 	return (
 		<Form {...form}>
-			<form onSubmit={form.handleSubmit(onSubmit)} className="space-y-2">
-				<FormField
-					control={form.control}
-					name="name"
-					render={({ field }) => (
-						<FormItem>
-							<FormLabel>Name</FormLabel>
-							<FormControl>
-								<Input placeholder="Your name" {...field} />
-							</FormControl>
-							<FormDescription>This is your name.</FormDescription>
-							<FormMessage />
-						</FormItem>
-					)}
-				/>
+			<form
+				onSubmit={form.handleSubmit(onSubmit)}
+				className="space-y-4"
+				action="https://formspree.io/f/mrbzgbdo"
+				method="POST"
+			>
+				<div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+					<FormField
+						control={form.control}
+						name="name"
+						render={({ field }) => (
+							<div className="FormItem">
+								<FormLabel>Name</FormLabel>
+								<FormControl>
+									<Input
+										className="focus:outline-none focus:ring-1 focus:ring-gray-900 focus:border-gray-900 border-gray-500"
+										placeholder="Your name"
+										{...field}
+									/>
+								</FormControl>
+								<FormMessage />
+							</div>
+						)}
+					/>
 
-				<FormField
-					control={form.control}
-					name="email"
-					render={({ field }) => (
-						<FormItem>
-							<FormLabel>Email</FormLabel>
-							<FormControl>
-								<Input placeholder="Your email" {...field} />
-							</FormControl>
-							<FormDescription>This is your email.</FormDescription>
-							<FormMessage />
-						</FormItem>
-					)}
-				/>
+					<FormField
+						control={form.control}
+						name="email"
+						render={({ field }) => (
+							<div className="FormItem">
+								<FormLabel>Email</FormLabel>
+								<FormControl>
+									<Input
+										className="focus:outline-none focus:ring-1 focus:ring-gray-900 focus:border-gray-900 border-gray-500"
+										placeholder="Your email"
+										{...field}
+									/>
+								</FormControl>
+								<FormMessage />
+							</div>
+						)}
+					/>
+				</div>
 
 				<FormField
 					control={form.control}
 					name="message"
 					render={({ field }) => (
-						<FormItem>
+						<div className="FormItem">
 							<FormLabel>Message</FormLabel>
 							<FormControl>
-								<Textarea placeholder="Your message" {...field} />
+								<Textarea
+									className="focus:outline-none focus:ring-1 focus:ring-gray-900 focus:border-gray-900 border-gray-500"
+									placeholder="Your message"
+									{...field}
+								/>
 							</FormControl>
-							<FormDescription>This is your message.</FormDescription>
 							<FormMessage />
-						</FormItem>
+						</div>
 					)}
 				/>
 
-				<Button type="submit" variant="outline" className="w-full text-white bg-dark">Submit</Button>
+				<Button
+					type="submit"
+					variant="secondary"
+					className="w-full"
+					disabled={isLoading}
+				>
+					{isLoading ? "Sending..." : "Send Email"}
+				</Button>
 			</form>
 		</Form>
 	);

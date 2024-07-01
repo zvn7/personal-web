@@ -12,7 +12,7 @@ const TimelineItem = ({
 			xmlns="http://www.w3.org/2000/svg"
 			viewBox="0 0 24 24"
 			fill="currentColor"
-			className="absolute -top-0.5 z-10 -ml-3.5 h-7 w-7 rounded-full text-blue-500"
+			className="absolute -top-1 z-10 -ml-3.5 h-7 w-7 rounded-full text-blue-500"
 		>
 			<path
 				fillRule="evenodd"
@@ -25,7 +25,7 @@ const TimelineItem = ({
 			<p className="mt-2 max-w-screen-sm text-sm text-gray-500">
 				{description}
 			</p>
-			<span className="mt-1 block text-sm font-semibold text-blue-500">
+			<span className="mt-1 block text-sm text-blue-500">
 				{duration}
 			</span>
 		</div>

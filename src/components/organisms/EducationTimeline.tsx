@@ -2,7 +2,7 @@ import { Book } from "lucide-react";
 import TimelineItem from "../molecules/TimelineItem";
 
 const EducationTimeline = () => (
-	<div >
+	<div>
 		<div className=" mx-auto">
 			<h1 className="text-2xl font-bold flex items-center">
 				<Book className="mr-2" /> Education
@@ -11,24 +11,14 @@ const EducationTimeline = () => (
 		<div className="p-4">
 			<div className="space-y-6 border-l-2 border-dashed border-gray-200">
 				<TimelineItem
-					title="University School Of The Arts"
-					duration="2007 — 2008"
-					description="Nemo enim ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et quas molestias exceptur."
+					title="SMK Negeri 7 Kendal"
+					duration="Juli 2020 - Mei 2023"
+					description="Meraih prestasi sebagai Juara 2 dalam Lomba Kompetensi Siswa (LKS) kategori Web Design di tingkat SMK Se-kabupaten Kendal pada bulan Maret 2023, menunjukkan kemampuan dan kreativitas dalam merancang web yang inovatif."
 				/>
 				<TimelineItem
-					title="New York Academy Of Art"
-					duration="2006 — 2007"
-					description="Ratione voluptatem sequi nesciunt, facere quisquams facere menda ossimus, omnis voluptas assumenda est omnis."
-				/>
-				<TimelineItem
-					title="High School Of Art And Design"
-					duration="2002 — 2004"
-					description="Duis aute irure dolor in reprehenderit in voluptate, quila voluptas mag odit aut fugit, sed consequuntur magni dolores eos."
-				/>
-				<TimelineItem
-					title="Lead Ui/Ux Designer"
-					duration="2007"
-					description="Aliquam tincidunt malesuada tortor vitae iaculis. In eu turpis iaculis, feugiat risus quis, aliquet urna. Quisque fringilla mollis risus, eu pulvinar dolor."
+					title="UT School (Fullstack IT Programmr)"
+					duration="November 2023 - Juni 2024"
+					description="ASP. Net: Menguasai pengembangan API yang efisien untuk mendukung interaksi atau perantara antar aplikasi. Firebase: Implementasi layanan Firebase untuk penyimpanan data dan manajemen pesan di aplikasi berbasis cloud. Git Versioning: Keahlian dalam manajemen kode yang efisien, terutama dalam proyek kolaboratif. Node JS, React JS, dan React Native: Penguasaan dalam pengembangan aplikasi web dan mobile dengan antarmuka pengguna responsif dan intuitif. PHP (Framework Laravel 9): Kemampuan membangun aplikasi web yang terstruktur dengan mengintegrasikan fitur-fitur yang dimiliki Laravel. Odoo ERP: Menguasai implementasi dan pengembangan sistem Odoo ERP, termasuk instalasi WSL Ubuntu, pgAdmin/PostgreSQL, inisialisasi proyek, pembuatan model, relasi tabel, kustomisasi tema dan ikon, serta pembuatan view dan wizard, serta pengaturan keamanan dan pelaporan."
 				/>
 			</div>
 		</div>

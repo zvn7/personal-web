@@ -1,8 +1,12 @@
 import React, { useEffect, useRef } from "react";
 import Typed from "typed.js";
 
-const TypedText = ({ strings }) => {
-	const typedRef = useRef(null);
+interface TypedTextProps {
+	strings: string[];
+}
+
+const TypedText: React.FC<TypedTextProps> = ({ strings }) => {
+	const typedRef = useRef<HTMLSpanElement>(null);
 
 	useEffect(() => {
 		const options = {
@@ -13,7 +17,7 @@ const TypedText = ({ strings }) => {
 			loop: true,
 		};
 
-		const typed = new Typed(typedRef.current, options);
+		const typed = new Typed(typedRef.current!, options);
 
 		return () => {
 			typed.destroy();

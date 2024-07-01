@@ -20,7 +20,7 @@ const routes: RouteObject[] = [
 		element: <Resume />,
 	},
 	{
-		path: "/portfolio",
+		path: "/projects",
 		element: <Portfolio />,
 	},
 	{

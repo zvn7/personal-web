@@ -1,78 +1,53 @@
-import React from "react";
 import Layout from "@/components/templates/Layout";
-import { Card } from "@/components/ui/card";
+import { BentoGrid, BentoGridItem } from "@/components/ui/bento-grid";
+import { blogPosts } from "@/lib/data";
+import { motion } from "framer-motion";
 
-const blogPosts = [
-	{
-		image: "/path/to/blog-image1.jpg",
-		category: "Technology",
-		date: "June 29, 2024",
-		title: "Lorem Ipsum Dolor Sit Amet",
-		content:
-			"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis libero id leo cursus, in tempor libero ultrices. Cras a purus et enim feugiat suscipit...",
-	},
-	{
-		image: "/path/to/blog-image2.jpg",
-		category: "Travel",
-		date: "June 28, 2024",
-		title: "Praesent Malesuada Feugiat Lacinia",
-		content:
-			"Praesent malesuada feugiat lacinia. Sed at sapien bibendum, tincidunt quam in, hendrerit lorem. Nulla facilisi...",
-	},
-	{
-		image: "/path/to/blog-image1.jpg",
-		category: "Technology",
-		date: "June 29, 2024",
-		title: "Lorem Ipsum Dolor Sit Amet",
-		content:
-			"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis libero id leo cursus, in tempor libero ultrices. Cras a purus et enim feugiat suscipit...",
-	},
-	{
-		image: "/path/to/blog-image2.jpg",
-		category: "Travel",
-		date: "June 28, 2024",
-		title: "Praesent Malesuada Feugiat Lacinia",
-		content:
-			"Praesent malesuada feugiat lacinia. Sed at sapien bibendum, tincidunt quam in, hendrerit lorem. Nulla facilisi...",
-	},
-    {
-		image: "/path/to/blog-image1.jpg",
-		category: "Technology",
-		date: "June 29, 2024",
-		title: "Lorem Ipsum Dolor Sit Amet",
-		content:
-			"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis libero id leo cursus, in tempor libero ultrices. Cras a purus et enim feugiat suscipit...",
-	},
-	{
-		image: "/path/to/blog-image2.jpg",
-		category: "Travel",
-		date: "June 28, 2024",
-		title: "Praesent Malesuada Feugiat Lacinia",
-		content:
-			"Praesent malesuada feugiat lacinia. Sed at sapien bibendum, tincidunt quam in, hendrerit lorem. Nulla facilisi...",
-	},
-];
+const truncateText = (text : string, wordLimit : number) => {
+	const words = text.split(" ");
+	if (words.length > wordLimit) {
+		return words.slice(0, wordLimit).join(" ") + "...";
+	}
+	return text;
+};
 
 const Blog = () => {
 	return (
 		<Layout title="Blog">
-			<div >
-				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4">
-					{blogPosts.map((post, index) => (
-						<Card key={index} className="bg-gray-700 p-4 rounded-lg">
-							<img
-								src={post.image}
-								alt={post.title}
-								className="mb-4 rounded-lg"
-							/>
-							<div className="text-sm text-gray-400 mb-2">{post.category}</div>
-							<div className="text-xs text-gray-500 mb-2">{post.date}</div>
-							<h2 className="text-xl font-bold mb-2">{post.title}</h2>
-							<p className="text-gray-400">{post.content}</p>
-						</Card>
-					))}
-				</div>
-			</div>
+			<BentoGrid className=" mx-auto md:auto-rows-[20rem]">
+				{blogPosts.map((post, index) => (
+					<BentoGridItem
+						key={post.id}
+						title={truncateText(post.title, 5)}
+						description={truncateText(post.content, 6)}
+						header={
+							<motion.div
+								initial="initial"
+								whileHover="animate"
+								className="relative overflow-hidden h-full rounded-2xl transition duration-200 group bg-gray-200 hover:shadow-xl border border-zinc-100"
+							>
+								<a href={post.link} target="_blank" rel="noopener noreferrer">
+									<div className="w-full h-full  aspect-w-16 aspect-h-10 bg-gray-200 rounded-tr-lg rounded-tl-lg overflow-hidden xl:aspect-w-16 xl:aspect-h-10 relative">
+										<img
+											src={post.image}
+											alt={post.title}
+											className="group-hover:scale-95 group-hover:rounded-2xl h-full transform object-cover transition duration-200"
+										/>
+									</div>
+								</a>
+							</motion.div>
+						}
+						icon={<span className="text-sm text-white">{post.date}</span>}
+						className={
+							index === 3
+								? "md:col-span-2"
+								: index === 4
+								? "md:col-span-1"
+								: "md:col-span-1"
+						}
+					/>
+				))}
+			</BentoGrid>
 		</Layout>
 	);
 };
