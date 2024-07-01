@@ -3,6 +3,7 @@ import Header from "../molecules/Header";
 import { BorderBeam } from "../ui/border-beam";
 import ShineBorder from "../ui/shine-border";
 import Particles from "../ui/particles";
+import Footer from "../molecules/Footer";
 
 const Layout = ({
 	children,
@@ -31,6 +32,7 @@ const Layout = ({
 					</div>
 				</ShineBorder>
 			</div>
+			<Footer />
 		</div>
 	);
 };
