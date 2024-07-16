@@ -1,7 +1,7 @@
 import Layout from "@/components/templates/Layout";
 import TypedText from "@/components/atoms/typed";
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
-import { Brush, CodeXml, File } from "lucide-react";
+import { Brush, Code, CodeXml, File } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/utils/cn";
 import { EvervaultCard, Icon } from "@/components/ui/evervault-card";
@@ -10,6 +10,7 @@ import { SparklesCore } from "@/components/ui/sparkles";
 import { useEffect, useState } from "react";
 import { SkeletonLatestArticles } from "@/components/molecules/SkeletonLatestArticles";
 import { Link } from "react-router-dom";
+import { MarqueeTech } from "@/components/molecules/MarqueeTech";
 
 const truncateText = (text: string, wordLimit: number) => {
 	const words = text.split(" ");
@@ -46,7 +47,6 @@ const Home = () => {
 			<div>
 				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4">
 					<div className="space-y-6">
-
 						<p className="text-justify">
 							Passionate about frontend technologies and UI/UX design, I strive
 							to create engaging web applications that marry functionality with
@@ -204,6 +204,13 @@ const Home = () => {
 							</div>
 						</div>
 					</div>
+				</div>
+
+				<div className="mt-8">
+					<div className="text-center">
+						<h2 className="text-2xl font-bold">Tech Stack</h2>
+					</div>
+					<MarqueeTech />
 				</div>
 
 				{/* <div className="mt-8">

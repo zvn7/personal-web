@@ -137,7 +137,8 @@ export const portfolioItems = [
 		category: "Web Development",
 		image: "https://plchldr.co/i/336x280",
 		title: "Dashboard Admin Reservasi Hotel",
-		description: "Description of Web Design Project 1",
+		description:
+			"Sebuah dashboard reservasi hotel berbasis Laravel yang memungkinkan pengguna untuk melakukan pemesanan kamar, mengecek ketersediaan, dan mengelola reservasi dengan mudah.",
 		link: "https://github.com/zvn7/reactjs-admin-dashboard-reservasi-hotel",
 		technologies: [],
 	},
@@ -145,7 +146,8 @@ export const portfolioItems = [
 		category: "Web Development",
 		image: "https://plchldr.co/i/336x280",
 		title: "RestroFind",
-		description: "Description of Web Development Project 1",
+		description:
+			" RestroFind adalah aplikasi web untuk mencari restoran dengan fitur pencarian yang intuitif. Proyek ini mengintegrasikan data restoran dengan tampilan antarmuka yang ramah pengguna.",
 		link: "https://frontend-dev-reactjs-ilham-maulana.vercel.app/",
 		technologies: [],
 	},
@@ -153,7 +155,8 @@ export const portfolioItems = [
 		category: "Web Development",
 		image: "https://plchldr.co/i/336x280",
 		title: "Dashboard Reservasi Hotel",
-		description: "Description of Web Design Project 1",
+		description:
+			"Proyek ini adalah dashboard administrasi untuk sistem reservasi hotel, dirancang untuk memudahkan pengelolaan reservasi dan tamu. Fitur yang termasuk di dalamnya adalah manajemen pemesanan",
 		link: "https://github.com/zvn7/reservasi-hotel-laravel9",
 		technologies: [],
 	},
@@ -161,7 +164,8 @@ export const portfolioItems = [
 		category: "Web Development",
 		image: "https://plchldr.co/i/336x280",
 		title: "Web layanan aplikasi ",
-		description: "Description of Web Development Project 1",
+		description:
+			"royek ini adalah aplikasi layanan berbasis web yang menyediakan berbagai fitur untuk pengguna, termasuk pemesanan layanan, manajemen pengguna, dan pelaporan.",
 		link: "https://github.com/zvn7/web-layanan-app",
 		technologies: [],
 	},
@@ -169,7 +173,8 @@ export const portfolioItems = [
 		category: "Web Development",
 		image: "https://plchldr.co/i/336x280",
 		title: "Move E-Learning Template ",
-		description: "Description of Web Design Project 1",
+		description:
+			"Template e-learning yang dirancang untuk memfasilitasi pendidikan online dengan fitur seperti materi, tugas, dan absensi.",
 		link: "https://zvn7.github.io/e-learning/",
 		technologies: [],
 	},
@@ -177,7 +182,8 @@ export const portfolioItems = [
 		category: "Application",
 		image: "https://plchldr.co/i/336x280",
 		title: "Reservasi Hotel Apps",
-		description: "Description of Application Project 1",
+		description:
+			"Aplikasi reservasi hotel berbasis React Native yang memungkinkan karyawan untuk melihat data reservasi.",
 		link: "https://github.com/zvn7/react-native-reservasi-hotel",
 		technologies: [],
 	},
@@ -185,7 +191,8 @@ export const portfolioItems = [
 		category: "Web Design",
 		image: "https://plchldr.co/i/336x280",
 		title: "Learning Management System",
-		description: "Description of Web Design Project 1",
+		description:
+			"Desain sistem manajemen pembelajaran (LMS) yang menyediakan antarmuka pengguna yang intuitif untuk pengelolaan materi, tugas dan absensi.",
 		link: "https://www.figma.com/file/3mkxkF3C0ODSbBeBYwmuW0/Learning-Management-System?type=design&node-id=0%3A1&mode=design&t=ZO0G6PjXJvAObFjA-1",
 		technologies: [],
 	},
@@ -193,7 +200,8 @@ export const portfolioItems = [
 		category: "Web Design",
 		image: "https://plchldr.co/i/336x280",
 		title: "Movie Ticketing Apps ",
-		description: "Description of Web Development Project 1",
+		description:
+			"Desain aplikasi penjualan tiket film yang modern dan mudah digunakan, memungkinkan pengguna untuk mencari film, melihat jadwal tayang, dan memesan tiket secara online.",
 		link: "https://www.figma.com/file/MpmLWMuie6FJvW0FDpMrlJ/Movie-ticketing-apps?type=design&node-id=0%3A1&mode=design&t=jE8nVWluaENp3vwF-1",
 		technologies: [],
 	},
@@ -201,7 +209,8 @@ export const portfolioItems = [
 		category: "Web Design",
 		image: "https://plchldr.co/i/336x280",
 		title: "Travel Web Landing Page ",
-		description: "Description of Web Development Project 1",
+		description:
+			"Desain halaman depan untuk situs web perjalanan yang menarik dan informatif, menampilkan destinasi populer, paket wisata, dan ulasan pengguna.",
 		link: "https://www.figma.com/file/2TXpxsyY3LzsWTXAUKZl9i/Travel-Website-Landing-Page?type=design&node-id=0%3A1&mode=design&t=m9h375w8PPJKZTue-1",
 		technologies: [],
 	},
@@ -209,8 +218,96 @@ export const portfolioItems = [
 		category: "Web Design",
 		image: "https://plchldr.co/i/336x280",
 		title: "Food Recipe App ",
-		description: "Description of Web Development Project 1",
+		description:
+			"Desain aplikasi resep makanan yang memberikan inspirasi memasak dengan antarmuka yang sederhana dan mudah digunakan. Fitur termasuk pencarian resep, daftar bahan, dan instruksi memasak.",
 		link: "https://www.figma.com/design/GTiYdKmp00Yk8GNSdBj7cm/Untitled?node-id=2-2676&t=BBqExhlMHMdxTwRj-1",
 		technologies: [],
+	},
+];
+
+export const techStack = [
+	{
+		name: "HTML",
+		icon: "html5",
+	},
+	{
+		name: "CSS",
+		icon: "css3",
+	},
+	{
+		name: "JavaScript",
+		icon: "js",
+	},
+	{
+		name: "Typescript",
+		icon: "typescript",
+	},
+	{
+		name: "React",
+		icon: "reactjs",
+	},
+	{
+		name: "Next.js",
+		icon: "nextjs",
+	},
+	{
+		name: "Node.js",
+		icon: "nodejs",
+	},
+	{
+		name: "Figma",
+		icon: "figma",
+	},
+	{
+		name: "VSCode",
+		icon: "vscode",
+	},
+	{
+		name: "Codeigniter",
+		icon: "codeigniter",
+	},
+	{
+		name: "Laravel",
+		icon: "laravel",
+	},
+	{
+		name: "Alpine JS",
+		icon: "alpinejs",
+	},
+	{
+		name: "Bootstrap 5",
+		icon: "bootstrap5",
+	},
+	{
+		name: "Canva",
+		icon: "canva",
+	},
+	{
+		name: "Azure",
+		icon: "azure",
+	},
+	{
+		name: "Git",
+		icon: "git",
+	},
+	{
+		name: "Github",
+		icon: "github",
+	},
+	{
+		name: "Framer Motion",
+		icon: "framer",
+	},
+	{
+		name: "React Query",
+		icon: "reactquery",
+	},
+	{
+		name: "Tailwind CSS",
+		icon: "tailwindcss",
+	},
+	{
+		name: "Zod",
+		icon: "zod",
 	},
 ];

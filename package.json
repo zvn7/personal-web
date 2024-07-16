@@ -34,6 +34,7 @@
     "tailwind-merge": "^2.3.0",
     "tailwind-scrollbar": "^3.1.0",
     "tailwindcss-animate": "^1.0.7",
+    "tech-stack-icons": "^2.0.3",
     "typed.js": "^2.1.0",
     "zod": "^3.23.8"
   },

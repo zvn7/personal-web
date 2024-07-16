@@ -1,7 +1,8 @@
 import Layout from "../components/templates/Layout";
-import { Github, Linkedin, Twitter } from "lucide-react";
+import { Code, Github, Linkedin, Twitter } from "lucide-react";
 import ExperienceTimeline from "@/components/organisms/ExperienceTimeline";
 import EducationTimeline from "@/components/organisms/EducationTimeline";
+import { MarqueeTech } from "@/components/molecules/MarqueeTech";
 
 const About = () => {
 	return (
@@ -67,6 +68,14 @@ const About = () => {
 					<ExperienceTimeline />
 					<EducationTimeline />
 				</div>
+			</div>
+
+			<div className="mt-8">
+				<div className="text-2xl font-bold mb-4 flex items-center ">
+					<Code className="w-6 h-6 text-white mr-2" />
+					Tech Stack
+				</div>
+				<MarqueeTech />
 			</div>
 
 			{/* <div className="mt-8">
