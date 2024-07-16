@@ -7,8 +7,8 @@ const About = () => {
 	return (
 		<Layout title="About Me">
 			<div className="flex flex-col items-center text-center space-y-4">
-				<div className="flex flex-col md:flex-row items-center space-x-4">
-					<div className="w-3/4 text-justify">
+				<div className="flex flex-col md:flex-row items-start md:items-center ">
+					<div className="w-full md:w3/4 text-justify">
 						<h1 className="text-2xl font-bold">
 							Hello, I'm <span className="text-blue-500">Ilham Maulana</span>, a
 							Web Developer and UI/UX Designer.
@@ -29,7 +29,7 @@ const About = () => {
 						</p>
 					</div>
 
-					<div className="w-1/4 flex flex-col items-center">
+					<div className="w-full md:w-1/4 flex flex-col items-center">
 						<img
 							src="https://plchldr.co/i/150x150"
 							alt="About Image"

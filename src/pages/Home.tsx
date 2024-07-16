@@ -9,6 +9,7 @@ import { blogPosts } from "@/lib/data";
 import { SparklesCore } from "@/components/ui/sparkles";
 import { useEffect, useState } from "react";
 import { SkeletonLatestArticles } from "@/components/molecules/SkeletonLatestArticles";
+import { Link } from "react-router-dom";
 
 const truncateText = (text: string, wordLimit: number) => {
 	const words = text.split(" ");
@@ -43,11 +44,8 @@ const Home = () => {
 			}
 		>
 			<div>
-				<div className="grid grid-cols-2 ">
+				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4">
 					<div className="space-y-6">
-						{/* <p className="mt-2 text-gray-600">
-							• Web Developer • UI/UX Designer
-						</p> */}
 
 						<p className="text-justify">
 							Passionate about frontend technologies and UI/UX design, I strive
@@ -56,10 +54,16 @@ const Home = () => {
 							committed to continuous learning and collaborative teamwork,
 							aiming to deliver efficient, user-friendly digital experiences.
 						</p>
-						<Button variant="secondary" className="mt-4">
-							<File className="mr-2 h-4 w-4" />
-							My Resume
-						</Button>
+						<Link
+							to="https://drive.google.com/file/d/1D4QTTRMtf8BJTe_jzQPLIdApvGtRAn1U/view?usp=sharing"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							<Button variant="secondary" className="mt-4">
+								<File className="mr-2 h-4 w-4" />
+								My Resume
+							</Button>
+						</Link>
 					</div>
 					<div className="h-[10rem] w-full bg-gray-900 flex flex-col items-center justify-center overflow-hidden rounded-md">
 						<p className="md:text-sm text-sm lg:text-sm font-bold text-center text-white relative z-20">
